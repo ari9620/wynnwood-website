@@ -27,9 +27,9 @@
   --color-sand: #e8dcc8;
   --color-sand-light: #f2ead8;
   --color-sky: #d4e8f0;
-  --font-serif: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
-  --font-sans: 'Noto Sans SC', 'Noto Sans Thai', 'Helvetica Neue', Arial, sans-serif;
-  --font-display: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  --font-serif: Georgia, 'Noto Serif SC', 'Songti SC', '宋体', serif;
+  --font-sans: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans Thai', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: Georgia, 'Noto Serif SC', 'Songti SC', serif;
   --max-width: 1200px;
   --nav-height: 80px;
   --radius: 12px;
