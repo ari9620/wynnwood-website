@@ -226,15 +226,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // PAYMENT URLS — 在这里配置你的支付链接
+  // PAYMENT URLS — 淘宝店铺链接
   // ==========================================
-  // 方式1: 注册 stripe.com → 创建 Payment Link → 粘贴链接
-  // 方式2: 使用你的淘宝店铺链接
-  // 方式3: 使用你的 PayPal.me 链接
   const PAYMENT_URLS = {
-    alipay: 'https://buy.stripe.com/your-alipay-link',   // TODO: 替换为实际支付宝支付链接
-    wechat: 'https://buy.stripe.com/your-wechat-link',    // TODO: 替换为实际微信支付链接
-    card: 'https://buy.stripe.com/your-card-link',        // TODO: 替换为实际银行卡支付链接
+    alipay: 'https://m.tb.cn/h.RDS5A7khY72JmYT',
+    wechat: 'https://m.tb.cn/h.RDS5A7khY72JmYT',
+    card:   'https://m.tb.cn/h.RDS5A7khY72JmYT',
   };
 
   // Submit order button
