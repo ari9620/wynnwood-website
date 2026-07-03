@@ -470,6 +470,9 @@ ul { list-style: none; }
 .scent-visual-apple  { background: linear-gradient(160deg, #f8f2e8 0%, #f0ead5 100%); }
 .scent-visual-berry  { background: linear-gradient(160deg, #f7f1ee 0%, #eee6db 100%); }
 .scent-visual-lemon  { background: linear-gradient(160deg, #eef2e6 0%, #e6eddc 100%); }
+.scent-visual-cedar  { background: linear-gradient(160deg, #e8e4dc 0%, #dcd6ca 100%); }
+.scent-visual-linen  { background: linear-gradient(160deg, #f4f1e8 0%, #ece4d4 100%); }
+.scent-visual-grass  { background: linear-gradient(160deg, #e8f0e0 0%, #dce8d0 100%); }
 .scent-visual::before {
   content: '';
   position: absolute;
@@ -1004,6 +1007,50 @@ ul { list-style: none; }
   line-height: 1.8;
   margin-top: 20px;
 }
+
+/* Order input fields */
+.order-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--color-text);
+  background: #fff;
+  transition: border-color var(--transition);
+}
+.order-input:focus { outline: none; border-color: var(--color-accent); }
+.order-input::placeholder { color: #c0c0b0; }
+
+.order-section-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 2px;
+  margin: 32px 0 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border-light);
+}
+.order-section-title:first-of-type { border-top: none; margin-top: 8px; padding-top: 0; }
+
+/* Payment Action Area */
+.payment-action-area { margin: 20px 0; }
+.payment-action { }
+.qr-code-box { text-align: center; padding: 20px; background: var(--color-bg); border-radius: var(--radius-sm); }
+.qr-img-placeholder {
+  display: flex; justify-content: center; margin-bottom: 16px;
+}
+.qr-img-placeholder svg { display: block; }
+
+.btn-submit-order {
+  width: 100%; margin-top: 24px; padding: 18px;
+  font-size: 16px; letter-spacing: 4px;
+}
+
+/* Order summary info */
+.summary-info { font-size: 14px; color: var(--color-text-soft); }
+.summary-info p { margin: 8px 0; font-weight: 300; }
 
 /* Summary */
 .summary-list { margin-bottom: 16px; }

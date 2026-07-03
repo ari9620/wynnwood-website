@@ -153,7 +153,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const orderTotal = document.getElementById('orderTotal');
   const summaryTotal = document.getElementById('summaryTotal');
   const summaryList = document.getElementById('summaryList');
-  const cardTotalSpans = document.querySelectorAll('.card-total');
+  const wechatPayAmount = document.getElementById('wechatPayAmount');
+  const alipayPayAmount = document.getElementById('alipayPayAmount');
+  const orderName = document.getElementById('orderName');
+  const orderPhone = document.getElementById('orderPhone');
+  const orderAddress = document.getElementById('orderAddress');
+  const summaryInfo = document.getElementById('summaryInfo');
+  const summaryName = document.getElementById('summaryName');
+  const summaryPhone = document.getElementById('summaryPhone');
+  const summaryAddr = document.getElementById('summaryAddr');
 
   // Extract price from select value
   function getPriceFromSelect() {
@@ -178,7 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (orderTotal) orderTotal.textContent = `¥${total}`;
     if (summaryTotal) summaryTotal.textContent = `¥${total}`;
-    cardTotalSpans.forEach(s => s.textContent = `${total}`);
+    if (wechatPayAmount) wechatPayAmount.textContent = `¥${total}`;
+    if (alipayPayAmount) alipayPayAmount.textContent = `¥${total}`;
 
     if (summaryList) {
       summaryList.innerHTML = `
@@ -187,6 +196,15 @@ document.addEventListener('DOMContentLoaded', () => {
           <span>¥${total}</span>
         </div>
       `;
+    }
+
+    // Update address summary
+    if (summaryInfo && orderName && orderPhone && orderAddress) {
+      const hasInfo = orderName.value || orderPhone.value || orderAddress.value;
+      summaryInfo.style.display = hasInfo ? 'block' : 'none';
+      if (summaryName) summaryName.textContent = orderName.value || '—';
+      if (summaryPhone) summaryPhone.textContent = orderPhone.value || '—';
+      if (summaryAddr) summaryAddr.textContent = orderAddress.value || '—';
     }
   }
 
@@ -206,11 +224,40 @@ document.addEventListener('DOMContentLoaded', () => {
     orderScent.addEventListener('change', updateOrderSummary);
   }
 
+  // Address input listeners
+  [orderName, orderPhone, orderAddress].forEach(el => {
+    if (el) el.addEventListener('input', updateOrderSummary);
+  });
+
+  // Submit order button
+  const btnSubmit = document.getElementById('btnSubmitOrder');
+  if (btnSubmit) {
+    btnSubmit.addEventListener('click', () => {
+      const name = orderName?.value?.trim() || '';
+      const phone = orderPhone?.value?.trim() || '';
+      const addr = orderAddress?.value?.trim() || '';
+
+      if (!name || !phone || !addr) {
+        alert('请填写完整的收货信息（姓名/电话/地址）');
+        return;
+      }
+
+      const scent = getScentName();
+      const qty = parseInt(orderQty?.value) || 1;
+      const total = getPriceFromSelect() * qty;
+      const activePayment = document.querySelector('.payment-tab.active');
+      const payMethod = activePayment ? activePayment.dataset.payment : 'wechat';
+      const payNames = { wechat: '微信支付', alipay: '支付宝', card: '银行卡' };
+
+      alert(`✅ 订单已提交！\n\n📦 ${scent} ×${qty}\n💰 ¥${total}\n💳 ${payNames[payMethod]}\n👤 ${name}\n📱 ${phone}\n📍 ${addr}\n\n我们将在24小时内发货，谢谢！`);
+    });
+  }
+
   // Payment method tabs
   const paymentTabs = document.querySelectorAll('.payment-tab');
-  const qrWechat = document.getElementById('qrWechat');
-  const qrAlipay = document.getElementById('qrAlipay');
-  const qrCard = document.getElementById('qrCard');
+  const payWechat = document.getElementById('payWechat');
+  const payAlipay = document.getElementById('payAlipay');
+  const payCard = document.getElementById('payCard');
 
   paymentTabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -218,9 +265,9 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.classList.add('active');
 
       const method = tab.dataset.payment;
-      if (qrWechat) qrWechat.style.display = method === 'wechat' ? 'block' : 'none';
-      if (qrAlipay) qrAlipay.style.display = method === 'alipay' ? 'block' : 'none';
-      if (qrCard) qrCard.style.display = method === 'card' ? 'block' : 'none';
+      if (payWechat) payWechat.style.display = method === 'wechat' ? 'block' : 'none';
+      if (payAlipay) payAlipay.style.display = method === 'alipay' ? 'block' : 'none';
+      if (payCard) payCard.style.display = method === 'card' ? 'block' : 'none';
     });
   });
 
