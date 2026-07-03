@@ -153,8 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const orderTotal = document.getElementById('orderTotal');
   const summaryTotal = document.getElementById('summaryTotal');
   const summaryList = document.getElementById('summaryList');
-  const wechatPayAmount = document.getElementById('wechatPayAmount');
-  const alipayPayAmount = document.getElementById('alipayPayAmount');
   const orderName = document.getElementById('orderName');
   const orderPhone = document.getElementById('orderPhone');
   const orderAddress = document.getElementById('orderAddress');
@@ -186,8 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (orderTotal) orderTotal.textContent = `¥${total}`;
     if (summaryTotal) summaryTotal.textContent = `¥${total}`;
-    if (wechatPayAmount) wechatPayAmount.textContent = `¥${total}`;
-    if (alipayPayAmount) alipayPayAmount.textContent = `¥${total}`;
 
     if (summaryList) {
       summaryList.innerHTML = `
@@ -229,6 +225,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (el) el.addEventListener('input', updateOrderSummary);
   });
 
+  // ==========================================
+  // PAYMENT URLS — 在这里配置你的支付链接
+  // ==========================================
+  // 方式1: 注册 stripe.com → 创建 Payment Link → 粘贴链接
+  // 方式2: 使用你的淘宝店铺链接
+  // 方式3: 使用你的 PayPal.me 链接
+  const PAYMENT_URLS = {
+    alipay: 'https://buy.stripe.com/your-alipay-link',   // TODO: 替换为实际支付宝支付链接
+    wechat: 'https://buy.stripe.com/your-wechat-link',    // TODO: 替换为实际微信支付链接
+    card: 'https://buy.stripe.com/your-card-link',        // TODO: 替换为实际银行卡支付链接
+  };
+
   // Submit order button
   const btnSubmit = document.getElementById('btnSubmitOrder');
   if (btnSubmit) {
@@ -246,10 +254,28 @@ document.addEventListener('DOMContentLoaded', () => {
       const qty = parseInt(orderQty?.value) || 1;
       const total = getPriceFromSelect() * qty;
       const activePayment = document.querySelector('.payment-tab.active');
-      const payMethod = activePayment ? activePayment.dataset.payment : 'wechat';
+      const payMethod = activePayment ? activePayment.dataset.payment : 'alipay';
       const payNames = { wechat: '微信支付', alipay: '支付宝', card: '银行卡' };
 
-      alert(`✅ 订单已提交！\n\n📦 ${scent} ×${qty}\n💰 ¥${total}\n💳 ${payNames[payMethod]}\n👤 ${name}\n📱 ${phone}\n📍 ${addr}\n\n我们将在24小时内发货，谢谢！`);
+      const confirmed = confirm(
+        `确认订单信息：\n\n` +
+        `📦 ${scent} ×${qty}\n` +
+        `💰 ¥${total}\n` +
+        `💳 ${payNames[payMethod]}\n` +
+        `👤 ${name}\n` +
+        `📱 ${phone}\n` +
+        `📍 ${addr}\n\n` +
+        `点击"确定"跳转至支付页面`
+      );
+
+      if (confirmed) {
+        const url = PAYMENT_URLS[payMethod];
+        if (url && !url.includes('your-')) {
+          window.location.href = url;
+        } else {
+          alert('支付链接尚未配置，请联系客服完成付款。\n📧 hello@wynnwood.cn');
+        }
+      }
     });
   }
 

@@ -955,63 +955,17 @@ ul { list-style: none; }
 }
 .payment-icon { font-size: 18px; }
 
-/* QR / Card Area */
-.payment-qr-area { margin-bottom: 20px; }
-.qr-container {
-  padding: 24px;
+/* Payment Action */
+.payment-action-area { margin: 20px 0; }
+.pay-desc {
+  text-align: center;
+  font-size: 15px;
+  color: var(--color-text-soft);
+  padding: 20px;
   background: var(--color-bg);
   border-radius: var(--radius-sm);
-  text-align: center;
+  font-weight: 300;
 }
-.qr-placeholder { }
-.qr-frame {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-.qr-inner {
-  padding: 20px;
-  background: #fff;
-  border: 2px solid var(--color-border);
-  border-radius: 12px;
-  display: inline-block;
-}
-.qr-hint {
-  font-size: 15px;
-  color: var(--color-text);
-  margin-bottom: 8px;
-  font-weight: 400;
-}
-.qr-note {
-  font-size: 13px;
-  color: var(--color-text-muted);
-  line-height: 1.8;
-}
-
-/* Card Form */
-.card-form { text-align: left; }
-.card-field { margin-bottom: 14px; }
-.card-field label {
-  display: block;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-  margin-bottom: 6px;
-}
-.card-input {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  font-family: var(--font-sans);
-  font-size: 15px;
-  color: var(--color-text);
-  background: #fff;
-  transition: border-color var(--transition);
-}
-.card-input:focus { outline: none; border-color: var(--color-accent); }
-.card-row { display: flex; gap: 12px; }
 
 .order-note {
   font-size: 13px;
