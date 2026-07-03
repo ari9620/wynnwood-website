@@ -273,12 +273,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Buy buttons on scent cards scroll to order section
   document.querySelectorAll('.buy-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const scentName = btn.dataset.scent;
-      const price = btn.dataset.price;
-
-      // Scroll to order section
-      document.getElementById('order-sec').scrollIntoView({ behavior: 'smooth' });
 
       // Pre-select the matching scent
       if (orderScent) {
@@ -290,6 +287,18 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
         updateOrderSummary();
+      }
+
+      // Scroll to order section
+      const target = document.getElementById('order-sec');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Flash effect
+        target.style.transition = 'box-shadow 0.3s ease';
+        target.style.boxShadow = '0 0 0 4px var(--color-accent)';
+        setTimeout(() => {
+          target.style.boxShadow = '';
+        }, 1500);
       }
     });
   });

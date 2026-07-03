@@ -28,7 +28,7 @@ const I18N = {
 
   // ---- Scents ----
   'scents.tag':    { cn: '/ 香型', en: '/ Scents', th: '/ กลิ่น' },
-  'scents.title':  { cn: '三种森林切片', en: 'Three slices of the forest', th: 'สามชิ้นส่วนของป่า' },
+  'scents.title':  { cn: '六款自然之息', en: 'Six breaths of nature', th: 'หกลมหายใจแห่งธรรมชาติ' },
   'scents.sub':    { cn: '我们不调"像什么"的香，我们还原自然里真实存在过的味道。', en: 'We don\'t create "fantasy" fragrances. We recreate real moments from real places.', th: 'เราไม่ได้สร้างกลิ่น "แฟนตาซี" เราสร้างช่วงเวลาจริงจากสถานที่จริง' },
 
   // Scent 1: McIntosh
