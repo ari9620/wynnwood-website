@@ -226,55 +226,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // PAYMENT URLS — 淘宝店铺链接
+  // ORDER VALIDATION — 下单前检查地址是否填写
   // ==========================================
-  const PAYMENT_URLS = {
-    alipay: 'https://m.tb.cn/h.RDS5A7khY72JmYT',
-    wechat: 'https://m.tb.cn/h.RDS5A7khY72JmYT',
-    card:   'https://m.tb.cn/h.RDS5A7khY72JmYT',
+  window.checkOrderBeforePay = function() {
+    const name = (document.getElementById('orderName')?.value || '').trim();
+    const phone = (document.getElementById('orderPhone')?.value || '').trim();
+    const addr = (document.getElementById('orderAddress')?.value || '').trim();
+
+    if (!name || !phone || !addr) {
+      alert('请先填写完整的收货信息（姓名 / 电话 / 地址）');
+      return false;
+    }
+
+    const scent = getScentName();
+    const qty = parseInt(orderQty?.value) || 1;
+    const total = getPriceFromSelect() * qty;
+
+    const confirmed = confirm(
+      '确认订单信息：\n\n' +
+      '📦 ' + scent + ' ×' + qty + '\n' +
+      '💰 ¥' + total + '\n' +
+      '👤 ' + name + '\n' +
+      '📱 ' + phone + '\n' +
+      '📍 ' + addr + '\n\n' +
+      '点击"确定"前往淘宝完成支付'
+    );
+
+    return confirmed;
   };
-
-  // Submit order button
-  const btnSubmit = document.getElementById('btnSubmitOrder');
-  if (btnSubmit) {
-    btnSubmit.addEventListener('click', () => {
-      const name = orderName?.value?.trim() || '';
-      const phone = orderPhone?.value?.trim() || '';
-      const addr = orderAddress?.value?.trim() || '';
-
-      if (!name || !phone || !addr) {
-        alert('请填写完整的收货信息（姓名/电话/地址）');
-        return;
-      }
-
-      const scent = getScentName();
-      const qty = parseInt(orderQty?.value) || 1;
-      const total = getPriceFromSelect() * qty;
-      const activePayment = document.querySelector('.payment-tab.active');
-      const payMethod = activePayment ? activePayment.dataset.payment : 'alipay';
-      const payNames = { wechat: '微信支付', alipay: '支付宝', card: '银行卡' };
-
-      const confirmed = confirm(
-        `确认订单信息：\n\n` +
-        `📦 ${scent} ×${qty}\n` +
-        `💰 ¥${total}\n` +
-        `💳 ${payNames[payMethod]}\n` +
-        `👤 ${name}\n` +
-        `📱 ${phone}\n` +
-        `📍 ${addr}\n\n` +
-        `点击"确定"跳转至支付页面`
-      );
-
-      if (confirmed) {
-        const url = PAYMENT_URLS[payMethod];
-        if (url && !url.includes('your-')) {
-          window.location.href = url;
-        } else {
-          alert('支付链接尚未配置，请联系客服完成付款。\n📧 hello@wynnwood.cn');
-        }
-      }
-    });
-  }
 
   // Payment method tabs
   const paymentTabs = document.querySelectorAll('.payment-tab');
