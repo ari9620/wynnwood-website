@@ -509,10 +509,11 @@ ul { list-style: none; }
   font-family: var(--font-serif);
   font-size: 64px;
   font-weight: 100;
-  color: var(--color-accent-light);
-  opacity: 0.2;
-  z-index: 0;
+  color: #fff;
+  opacity: 0.5;
+  z-index: 1;
   line-height: 1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .scent-info {
