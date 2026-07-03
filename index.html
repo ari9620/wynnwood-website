@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WYNNWOOD 蔚木 — Handmade Aromatherapy Candles | Forest & Coastal Scents</title>
+<meta name="description" content="WYNNWOOD 蔚木 — 100% soy wax, imported essential oils, hand-poured aromatherapy candles. Forest meets coast this summer. Create warm moments for you.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@200;300;400;600&family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">WYNNWOOD</a>
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-btn active" data-lang="cn">中文</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" data-lang="th">ไทย</button>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#story"    data-i18n="nav.story">品牌故事</a></li>
+      <li><a href="#scents"   data-i18n="nav.scents">香型</a></li>
+      <li><a href="#coastal"  data-i18n="nav.coastal" style="display:none">夏日海岸</a></li>
+      <li><a href="#craft"    data-i18n="nav.craft">工艺</a></li>
+      <li><a href="#contact"  data-i18n="nav.contact">购买</a></li>
+      <li><a href="#order-sec" class="nav-order-btn" data-i18n="nav.order">下单</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-i18n="hero.eyebrow">手工小批量灌注</p>
+    <h1 class="hero-title">
+      <span class="hero-title-en">WYNNWOOD</span>
+      <span class="hero-title-zh">蔚 木</span>
+    </h1>
+    <div class="hero-line"></div>
+    <p class="hero-subtitle" data-i18n="hero.subtitle">从森林到你的房间。<br>为你创造温暖时刻。</p>
+    <div class="hero-cta-group">
+      <a href="#scents" class="btn btn-primary" data-i18n="hero.cta">探索我们的香型</a>
+      <a href="#order-sec" class="btn btn-outline">🛒 立即下单</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span data-i18n="hero.scroll">向下滚动</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== BRAND STORY ===== -->
+<section class="story" id="story">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag"  data-i18n="story.tag">/ 品牌故事</span>
+      <h2 class="section-title" data-i18n="story.title">一片森林，一位老友，一簇火光</h2>
+    </div>
+
+    <div class="story-grid">
+      <div class="story-card">
+        <div class="story-letter">W</div>
+        <h3>WYNN</h3>
+        <p data-i18n="story.wynn.desc">古英语"朋友"<br>也寓意快乐</p>
+      </div>
+      <div class="story-plus">+</div>
+      <div class="story-card">
+        <div class="story-letter">W</div>
+        <h3>WOOD</h3>
+        <p data-i18n="story.wood.desc">不是一棵树<br>是一片繁茂的森林</p>
+      </div>
+      <div class="story-plus">=</div>
+      <div class="story-card story-card-zh">
+        <div class="story-letter">蔚</div>
+        <h3>蔚木</h3>
+        <p data-i18n="story.wynwood.desc">一片安静的森林<br>用气息将你包裹——<br>像一个老朋友</p>
+      </div>
+    </div>
+
+    <div class="story-philosophy">
+      <p class="philosophy-lead" data-i18n="story.philosophy.lead">我们存在的理由只有一个：<em>给你一个理直气壮慢下来的理由。</em></p>
+      <p class="philosophy-body" data-i18n="story.philosophy.body">现代生活充斥着噪音、速度和无尽的信息流。蜡烛的节奏完全相反——划火柴三秒，火焰稳定三十秒，森林在五分钟内抵达。<br><br>我们不卖蜡。我们卖一个你可以理直气壮停下来的理由。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCENTS ===== -->
+<section class="scents" id="scents">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag"  data-i18n="scents.tag">/ 香型</span>
+      <h2 class="section-title" data-i18n="scents.title">三种森林切片</h2>
+      <p class="section-sub"    data-i18n="scents.sub">我们不调"像什么"的香，我们还原自然里真实存在过的味道。</p>
+    </div>
+
+    <!-- Scent 1: McIntosh -->
+    <div class="scent-item">
+      <div class="scent-visual scent-visual-apple">
+        <div class="scent-badge" data-i18n="scent1.badge">畅销款</div>
+        <div class="scent-emoji">🍎</div>
+        <span class="scent-number">01</span>
+      </div>
+      <div class="scent-info">
+        <span class="scent-type" data-i18n="scent1.type">果香 · 清新</span>
+        <h3>McIntosh <strong>红苹果</strong></h3>
+        <p class="scent-story" data-i18n="scent1.story">一位调香师朋友去北海道徒步，经过一片野苹果林。红透的果子挂满枝头，被秋日阳光晒得微微发酵，空气中混着果香和草木的甜。</p>
+        <div class="scent-notes">
+          <span class="note" data-i18n="scent1.notes.top">前调：青苹果皮</span>
+          <span class="note" data-i18n="scent1.notes.heart">中调：野玫瑰</span>
+          <span class="note" data-i18n="scent1.notes.base">后调：雪松木</span>
+        </div>
+        <p class="scent-vibe" data-i18n="scent1.vibe">🌲 点燃像一间北欧森林木屋</p>
+        <div class="scent-buy-row">
+          <span class="scent-price">¥68</span>
+          <button class="btn btn-sm btn-primary buy-btn" data-scent="McIntosh 红苹果" data-price="68">🛒 立即购买</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scent 2: Raspberry -->
+    <div class="scent-item scent-item-reverse">
+      <div class="scent-visual scent-visual-berry">
+        <div class="scent-badge" data-i18n="scent2.badge">送礼首选</div>
+        <div class="scent-emoji">🍓</div>
+        <span class="scent-number">02</span>
+      </div>
+      <div class="scent-info">
+        <span class="scent-type" data-i18n="scent2.type">温暖 · 舒适</span>
+        <h3>Raspberry <strong>覆盆子</strong></h3>
+        <p class="scent-story" data-i18n="scent2.story">冬天围在壁炉边吃浆果的温暖记忆。温润的、包裹性的甜酸，像羊绒围巾碰在脸上的触感。这支最适合送人。</p>
+        <div class="scent-notes">
+          <span class="note" data-i18n="scent2.notes.top">前调：野生覆盆子</span>
+          <span class="note" data-i18n="scent2.notes.heart">中调：玫瑰原精</span>
+          <span class="note" data-i18n="scent2.notes.base">后调：柔和麝香</span>
+        </div>
+        <p class="scent-vibe" data-i18n="scent2.vibe">🪵 点燃像一个可以窝一整天的冬日角落</p>
+        <div class="scent-buy-row">
+          <span class="scent-price">¥68</span>
+          <button class="btn btn-sm btn-primary buy-btn" data-scent="Raspberry 覆盆子" data-price="68">🛒 立即购买</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scent 3: Lemon Eucalyptus -->
+    <div class="scent-item">
+      <div class="scent-visual scent-visual-lemon">
+        <div class="scent-badge" data-i18n="scent3.badge">独处时光</div>
+        <div class="scent-emoji">🍋</div>
+        <span class="scent-number">03</span>
+      </div>
+      <div class="scent-info">
+        <span class="scent-type" data-i18n="scent3.type">清新 · 干净</span>
+        <h3>Lemon Eucalyptus <strong>柠檬桉树</strong></h3>
+        <p class="scent-story" data-i18n="scent3.story">雨后桉树林的气味。柠檬的清澈叠加桉树的清冽，像一场刚停的雨把空气洗了一遍。这支最适合独处。</p>
+        <div class="scent-notes">
+          <span class="note" data-i18n="scent3.notes.top">前调：柠檬皮</span>
+          <span class="note" data-i18n="scent3.notes.heart">中调：尤加利</span>
+          <span class="note" data-i18n="scent3.notes.base">后调：白苔藓</span>
+        </div>
+        <p class="scent-vibe" data-i18n="scent3.vibe">🌿 点燃像一片刚下过雨的澳大利亚森林</p>
+        <div class="scent-buy-row">
+          <span class="scent-price">¥68</span>
+          <button class="btn btn-sm btn-primary buy-btn" data-scent="Lemon Eucalyptus 柠檬桉树" data-price="68">🛒 立即购买</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SUMMER COASTAL ===== -->
+<section class="coastal" id="coastal">
+  <div class="coastal-bg">
+    <img src="images/coastal-summer.jpg" alt="Summer coastal vibes" class="coastal-img" loading="lazy">
+    <div class="coastal-overlay"></div>
+  </div>
+  <div class="container coastal-content">
+    <div class="section-header">
+      <span class="section-tag"  data-i18n="coastal.tag">/ 夏日海岸</span>
+      <h2 class="section-title" data-i18n="coastal.title">当森林遇见海岸</h2>
+    </div>
+    <div class="coastal-text">
+      <p data-i18n="coastal.desc">这个夏天，我们为 WYNNWOOD 注入了一丝海风的咸味。想象森林边缘的海岸线——松树的气息混合着浪花的水雾，阳光晒过的沙滩，和地平线上无尽的蔚蓝。点燃它，你的房间是一片森林与海洋交界的地方。</p>
+    </div>
+    <div class="coastal-features">
+      <div class="coastal-feat">
+        <span class="coastal-feat-icon">🌊</span>
+        <span>Ocean Breeze</span>
+      </div>
+      <div class="coastal-feat">
+        <span class="coastal-feat-icon">🌲</span>
+        <span>Forest Edge</span>
+      </div>
+      <div class="coastal-feat">
+        <span class="coastal-feat-icon">☀️</span>
+        <span>Summer Light</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag"  data-i18n="gallery.tag">/ 画廊</span>
+      <h2 class="section-title" data-i18n="gallery.title">捕捉的瞬间</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="images/DSC_8693-已增强-降噪.jpg" alt="WYNNWOOD candle lit" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/DSC_8716-已增强-降噪.jpg" alt="WYNNWOOD candle packaging" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/DSC_8720-已增强-降噪.jpg" alt="WYNNWOOD candle detail" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/DSC_8968-已增强-降噪.jpg" alt="WYNNWOOD candle close up" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/coastal-summer.jpg" alt="Summer coastal vibes" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/DSC_8947-已增强-降噪.jpg" alt="WYNNWOOD candle scene" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CRAFT ===== -->
+<section class="craft" id="craft">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag"  data-i18n="craft.tag">/ 工艺</span>
+      <h2 class="section-title" data-i18n="craft.title">像森林一样，没有多余的东西</h2>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-item">
+        <div class="craft-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="0.5"/><path d="M12 22 Q20 10 28 22" stroke="currentColor" stroke-width="0.8" fill="none"/><circle cx="16" cy="18" r="1.5" fill="currentColor"/><circle cx="24" cy="18" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <span class="craft-num">01</span>
+        <h3 data-i18n="craft1.title">100% 大豆蜡</h3>
+        <p data-i18n="craft1.desc">不用石蜡。燃烧更干净、温度更低、时间更长。没有黑烟，不会把天花板熏黄。取自大豆，归于自然。</p>
+      </div>
+      <div class="craft-item">
+        <div class="craft-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="0.5"/><path d="M10 28 Q16 8 20 12 Q24 8 30 28" stroke="currentColor" stroke-width="0.8" fill="none"/><circle cx="20" cy="16" r="2" fill="currentColor"/></svg>
+        </div>
+        <span class="craft-num">02</span>
+        <h3 data-i18n="craft2.title">12+ 轮调香</h3>
+        <p data-i18n="craft2.desc">进口精油调香。每一款香型都经过了十几轮打样，直到闻起来像站在真正的森林里。</p>
+      </div>
+      <div class="craft-item">
+        <div class="craft-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="10" y="12" width="20" height="20" rx="4" stroke="currentColor" stroke-width="0.5"/><rect x="13" y="15" width="14" height="10" rx="1" stroke="currentColor" stroke-width="0.5"/><line x1="16" y1="28" x2="24" y2="28" stroke="currentColor" stroke-width="0.5"/></svg>
+        </div>
+        <span class="craft-num">03</span>
+        <h3 data-i18n="craft3.title">厚壁玻璃杯</h3>
+        <p data-i18n="craft3.desc">握在手里有分量感。蜡烛烧完后，杯子可以当收纳杯、化妆刷桶，不会变成一次性垃圾。</p>
+      </div>
+      <div class="craft-item">
+        <div class="craft-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="0.5"/><circle cx="20" cy="16" r="7" stroke="currentColor" stroke-width="0.5"/><path d="M14 22 L20 28 L26 22" stroke="currentColor" stroke-width="0.8" fill="none"/></svg>
+        </div>
+        <span class="craft-num">04</span>
+        <h3 data-i18n="craft4.title">磁吸盖子</h3>
+        <p data-i18n="craft4.desc">熄灭蜡烛后盖上，隔绝空气，让香味完美封存在蜡体里。小细节，但用过的人都懂。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRINCIPLES ===== -->
+<section class="principles" id="principles">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag"  data-i18n="principles.tag">/ 底线</span>
+      <h2 class="section-title" data-i18n="principles.title">森林里没有捷径</h2>
+    </div>
+    <div class="principles-grid">
+      <div class="principle-item"><span class="principle-icon">—</span><p data-i18n="principle1">不碰石蜡<br><small>无论成本多低</small></p></div>
+      <div class="principle-item"><span class="principle-icon">—</span><p data-i18n="principle2">不做 9.9<br><small>品质是我们的底线</small></p></div>
+      <div class="principle-item"><span class="principle-icon">—</span><p data-i18n="principle3">不追风口<br><small>做你会复购的蜡烛</small></p></div>
+      <div class="principle-item"><span class="principle-icon">—</span><p data-i18n="principle4">不假装进口<br><small>认真做国货</small></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ORDER SECTION ===== -->
+<section class="order-sec" id="order-sec">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">🛒</span>
+      <h2 class="section-title" data-i18n="order.title">立即下单</h2>
+    </div>
+
+    <div class="order-grid">
+      <!-- Order Form -->
+      <div class="order-form-panel">
+        <div class="order-field">
+          <label data-i18n="order.select">选择香型</label>
+          <select id="orderScent" class="order-select">
+            <option value="McIntosh 红苹果 (¥68)">🍎 McIntosh 红苹果 — ¥68</option>
+            <option value="Raspberry 覆盆子 (¥68)">🍓 Raspberry 覆盆子 — ¥68</option>
+            <option value="Lemon Eucalyptus 柠檬桉树 (¥68)">🍋 Lemon Eucalyptus 柠檬桉树 — ¥68</option>
+            <option value="3-Pack Gift Set (¥188)">🎁 三支礼盒套装 — ¥188</option>
+          </select>
+        </div>
+
+        <div class="order-field">
+          <label data-i18n="order.qty">数量</label>
+          <div class="qty-control">
+            <button type="button" id="qtyMinus">−</button>
+            <input type="number" id="orderQty" value="1" min="1" max="20" readonly>
+            <button type="button" id="qtyPlus">+</button>
+          </div>
+        </div>
+
+        <div class="order-total-row">
+          <span data-i18n="order.total">合计</span>
+          <span class="order-total-price" id="orderTotal">¥68</span>
+        </div>
+
+        <!-- Payment Methods -->
+        <div class="payment-methods">
+          <p class="payment-label">💳 选择支付方式</p>
+          <div class="payment-tabs">
+            <button class="payment-tab active" data-payment="wechat">
+              <span class="payment-icon">💚</span>
+              <span data-i18n="order.wechat">微信支付</span>
+            </button>
+            <button class="payment-tab" data-payment="alipay">
+              <span class="payment-icon">💙</span>
+              <span data-i18n="order.alipay">支付宝</span>
+            </button>
+            <button class="payment-tab" data-payment="card">
+              <span class="payment-icon">💳</span>
+              <span data-i18n="order.card">银行卡/信用卡</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- QR Code Area -->
+        <div class="payment-qr-area" id="paymentQrArea">
+          <div class="qr-container" id="qrWechat">
+            <div class="qr-placeholder">
+              <div class="qr-frame">
+                <div class="qr-inner">
+                  <svg width="160" height="160" viewBox="0 0 160 160">
+                    <!-- Decorative QR-like pattern -->
+                    <rect x="10" y="10" width="50" height="50" rx="4" fill="none" stroke="#7a9a5c" stroke-width="3"/>
+                    <rect x="18" y="18" width="34" height="34" rx="2" fill="#7a9a5c" opacity="0.8"/>
+                    <rect x="100" y="10" width="50" height="50" rx="4" fill="none" stroke="#7a9a5c" stroke-width="3"/>
+                    <rect x="108" y="18" width="34" height="34" rx="2" fill="#7a9a5c" opacity="0.8"/>
+                    <rect x="10" y="100" width="50" height="50" rx="4" fill="none" stroke="#7a9a5c" stroke-width="3"/>
+                    <rect x="18" y="108" width="34" height="34" rx="2" fill="#7a9a5c" opacity="0.8"/>
+                    <!-- Center pattern -->
+                    <circle cx="80" cy="80" r="25" fill="none" stroke="#7a9a5c" stroke-width="2"/>
+                    <circle cx="80" cy="80" r="12" fill="#7a9a5c" opacity="0.5"/>
+                    <circle cx="80" cy="80" r="4" fill="#7a9a5c"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="qr-hint">📱 <span data-i18n="order.scan">扫码支付</span></p>
+              <p class="qr-note">请使用微信扫描二维码完成支付<br><small>（请替换为您的实际收款二维码）</small></p>
+            </div>
+          </div>
+          <div class="qr-container" id="qrAlipay" style="display:none">
+            <div class="qr-placeholder">
+              <div class="qr-frame">
+                <div class="qr-inner">
+                  <svg width="160" height="160" viewBox="0 0 160 160">
+                    <rect x="10" y="10" width="50" height="50" rx="4" fill="none" stroke="#1677ff" stroke-width="3"/>
+                    <rect x="18" y="18" width="34" height="34" rx="2" fill="#1677ff" opacity="0.8"/>
+                    <rect x="100" y="10" width="50" height="50" rx="4" fill="none" stroke="#1677ff" stroke-width="3"/>
+                    <rect x="108" y="18" width="34" height="34" rx="2" fill="#1677ff" opacity="0.8"/>
+                    <rect x="10" y="100" width="50" height="50" rx="4" fill="none" stroke="#1677ff" stroke-width="3"/>
+                    <rect x="18" y="108" width="34" height="34" rx="2" fill="#1677ff" opacity="0.8"/>
+                    <circle cx="80" cy="80" r="25" fill="none" stroke="#1677ff" stroke-width="2"/>
+                    <circle cx="80" cy="80" r="12" fill="#1677ff" opacity="0.5"/>
+                    <circle cx="80" cy="80" r="4" fill="#1677ff"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="qr-hint">📱 <span data-i18n="order.scan">扫码支付</span></p>
+              <p class="qr-note">请使用支付宝扫描二维码完成支付<br><small>（请替换为您的实际收款二维码）</small></p>
+            </div>
+          </div>
+          <div class="qr-container" id="qrCard" style="display:none">
+            <div class="card-form">
+              <div class="card-field">
+                <label>Card Number</label>
+                <input type="text" placeholder="•••• •••• •••• ••••" class="card-input">
+              </div>
+              <div class="card-row">
+                <div class="card-field" style="flex:1">
+                  <label>Expiry</label>
+                  <input type="text" placeholder="MM/YY" class="card-input">
+                </div>
+                <div class="card-field" style="flex:1">
+                  <label>CVC</label>
+                  <input type="text" placeholder="•••" class="card-input">
+                </div>
+              </div>
+              <button class="btn btn-primary btn-full">Pay ¥<span class="card-total">68</span></button>
+              <p class="qr-note">🔒 Secured by Stripe<br><small>（请在Stripe后台配置支付链接）</small></p>
+            </div>
+          </div>
+        </div>
+
+        <p class="order-note" data-i18n="order.note">下单后24小时内发货，如有疑问请联系客服</p>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="order-summary-panel">
+        <h3>🧾 Order Summary</h3>
+        <div class="summary-list" id="summaryList">
+          <div class="summary-item">
+            <span>🍎 McIntosh 红苹果 ×1</span>
+            <span>¥68</span>
+          </div>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-total">
+          <span>Total</span>
+          <span id="summaryTotal">¥68</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT / CTA ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <p class="contact-quote" data-i18n="contact.quote">如果，在某个普通的夜晚，<br>你点燃我们的一支蜡烛，发现自己——<br>仅仅三十分钟——真正地慢了下来……</p>
+      <div class="contact-line"></div>
+      <p class="contact-quote-end" data-i18n="contact.quote.end">那我们就做到了想做的事。</p>
+      <div class="contact-cta-group">
+        <p class="contact-cta-lead" data-i18n="contact.cta.lead">从 McIntosh 红苹果开始。它是我们调了最久的一支，也是我们最引以为傲的作品。</p>
+        <div class="contact-channels">
+          <div class="contact-channel">
+            <h4>🍑 Taobao</h4>
+            <p data-i18n="contact.taobao">搜索 <strong>"WYNNWOOD蔚木"</strong></p>
+          </div>
+          <div class="contact-channel">
+            <h4>📕 RED</h4>
+            <p data-i18n="contact.xhs">关注 <strong>@WYNNWOOD蔚木</strong></p>
+          </div>
+          <div class="contact-channel">
+            <h4>📧 Email</h4>
+            <p data-i18n="contact.email"><strong>hello@wynnwood.cn</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>WYNNWOOD 蔚木</h3>
+        <p data-i18n="footer.brand.desc">手工灌注香薰蜡烛。<br>100%大豆蜡。进口精油。<br>为你创造温暖时刻。</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 data-i18n="footer.shop">购买</h4>
+          <a href="#scents">McIntosh 红苹果</a>
+          <a href="#scents">Raspberry 覆盆子</a>
+          <a href="#scents">Lemon Eucalyptus 柠檬桉树</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.about">关于</h4>
+          <a href="#story">Our Story</a>
+          <a href="#craft">Craftsmanship</a>
+          <a href="#principles">Principles</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.connect">关注</h4>
+          <a href="#">Taobao</a>
+          <a href="#">Xiaohongshu</a>
+          <a href="#">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copyright">© 2026 WYNNWOOD 蔚木。保留所有权利。🌿 中国制造。</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
