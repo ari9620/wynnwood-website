@@ -719,6 +719,19 @@ ul { list-style: none; }
   position: relative;
   z-index: 1;
 }
+.craft-img {
+  margin-bottom: 24px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 1;
+  position: relative;
+  z-index: 1;
+}
+.craft-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .craft-num {
   font-family: var(--font-serif);
   font-size: 14px;
